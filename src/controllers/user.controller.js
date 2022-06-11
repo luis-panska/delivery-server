@@ -6,8 +6,20 @@ const validateEmailInUse = async (email) => {
   if (user) throw new Error("Email already in use");
 };
 
+const validatePhoneInUse = async (phone) => {
+  const user = await User.findOne({ phone });
+  if (user) throw new Error("Phone already in use");
+};
+
+const validateUsername = async (username) => {
+  const user = await User.findOne({ username });
+  if (user) throw new Error("Username already in use");
+};
+
 const create = async (name, lastname, email, password) => {
   await validateEmailInUse(email);
+  await validateUsername(username);
+  await validatePhoneInUse(phone);
   const newUser = new User({
     name,
     lastname,
