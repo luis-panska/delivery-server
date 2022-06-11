@@ -17,7 +17,7 @@ router.post("", async (req, res) => {
     const newUser = await create(username, phone, email, password);
     res.status(200).json({
       ok: true,
-      message: "User created",
+      message: "Cuenta registrada correctamente",
       user: newUser,
     });
   } catch (error) {

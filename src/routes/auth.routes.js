@@ -10,7 +10,7 @@ router.post("/login", async (req, res) => {
     const authData = await login(email, password);
     return res.status(200).json({
       ok: true,
-      message: "Login successful",
+      message: "Se ha iniciado sesión correctamente",
       token: authData.token,
       user: authData.user,
     });

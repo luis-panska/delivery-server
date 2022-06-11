@@ -2,21 +2,23 @@ const bycrypt = require("bcryptjs");
 const User = require("../models/user.model");
 
 const validateEmailInUse = async (email) => {
-  if (!email) throw new Error("Email is required");
+  if (!email) throw new Error("El correo es un campo obligatorio");
   const user = await User.findOne({ email });
-  if (user) throw new Error("Email already in use");
+  if (user) throw new Error("El correo ya está en uso");
 };
 
 const validatePhoneInUse = async (phone) => {
-  if (!phone) throw new Error("Phone is required");
+  if (!phone) throw new Error("El telefono es un campo obligatorio");
   const user = await User.findOne({ phone });
-  if (user) throw new Error("Phone already in use");
+  if (user) throw new Error("El telefono ya está en uso");
 };
 
 const validateUsername = async (username) => {
-  if (!username) throw new Error("Username is required");
+  if (!username) {
+    throw new Error("El nombre de usuario es un campo obligatorio");
+  }
   const user = await User.findOne({ username });
-  if (user) throw new Error("Username already in use");
+  if (user) throw new Error("El nombre de usuario ya está en uso");
 };
 
 const validateData = async (email, username, phone) => {
