@@ -4,9 +4,9 @@ const jwt = require("jsonwebtoken");
 
 const login = async (email, password) => {
   const user = await User.findOne({ email });
-  if (!user) throw new Error("Invalid credentials");
+  if (!user) throw new Error("No hay un usuario registrado con ese email");
   if (!(await bycrypt.compare(password, user.password))) {
-    throw new Error("Invalid credentials");
+    throw new Error("Contraseña incorrecta");
   }
   const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
     expiresIn: "24h",
