@@ -1,6 +1,7 @@
 const express = require("express");
-const User = require("../models/user.model");
 const router = express.Router();
+const User = require("../models/user.model");
+const { create } = require("../controllers/user.controller");
 
 router.get("", async (req, res) => {
   try {
@@ -13,13 +14,7 @@ router.get("", async (req, res) => {
 router.post("", async (req, res) => {
   try {
     const { name, lastname, email, password } = req.body;
-    const newUser = new User({
-      name,
-      lastname,
-      email,
-      password,
-    });
-    await newUser.save();
+    const newUser = await create(name, lastname, email, password);
     res.status(200).json({
       message: "User created",
       user: newUser,
