@@ -13,8 +13,8 @@ router.get("", async (req, res) => {
 });
 router.post("", async (req, res) => {
   try {
-    const { name, lastname, email, password } = req.body;
-    const newUser = await create(name, lastname, email, password);
+    const { username, phone, email, password } = req.body;
+    const newUser = await create(username, phone, email, password);
     res.status(200).json({
       message: "User created",
       user: newUser,

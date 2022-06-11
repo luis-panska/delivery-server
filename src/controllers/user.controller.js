@@ -16,15 +16,15 @@ const validateUsername = async (username) => {
   if (user) throw new Error("Username already in use");
 };
 
-const create = async (name, lastname, email, password) => {
+const create = async (username, phone, email, password) => {
   await validateEmailInUse(email);
   await validateUsername(username);
   await validatePhoneInUse(phone);
   const newUser = new User({
-    name,
-    lastname,
+    username,
     email,
     password: await bycrypt.hash(password, 10),
+    phone,
   });
   await newUser.save();
   return newUser;
