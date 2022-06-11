@@ -19,14 +19,14 @@ const validateUsername = async (username) => {
   if (user) throw new Error("Username already in use");
 };
 
-const validateData = async () => {
+const validateData = async (email, username, phone) => {
   await validateEmailInUse(email);
   await validateUsername(username);
   await validatePhoneInUse(phone);
 };
 
 const create = async (username, phone, email, password) => {
-  await validateData();
+  await validateData(email, username, phone);
   const newUser = new User({
     username,
     email,
