@@ -1,20 +1,25 @@
-import User from "../models/user.model";
+const User = require("../models/user.model");
+const bycrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
 
-export const login = async (req, res) => {
-  try {
-    const { email, password } = req.body;
-    const user = await User.findOne({ email });
-    return res.status(200).json({
-      ok: true,
-      message: "Login successful",
-      token: "token",
-    });
-  } catch (error) {
-    return res.status(500).json({
-      ok: false,
-      message: error.message,
-    });
+const login = async (email, password) => {
+  const user = await User.findOne({ email });
+  if (!user) throw new Error("Invalid credentials");
+  if (!(await bycrypt.compare(password, user.password))) {
+    throw new Error("Invalid credentials");
   }
+  const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
+    expiresIn: "24h",
+  });
+  return {
+    token,
+    user: {
+      id: user._id,
+      username: user.username,
+      email: user.email,
+      phone: user.phone,
+    },
+  };
 };
 
-
+module.exports = { login };

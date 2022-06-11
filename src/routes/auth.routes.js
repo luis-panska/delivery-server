@@ -1,21 +1,24 @@
 const express = require("express");
+const { login } = require("../controllers/auth.controller");
 
 const router = express.Router();
 
 // Login
-router.post("/login", (req, res) => {
+router.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
-    if(password !== "123456") throw new Error("Invalid credentials");
+    const authData = await login(email, password);
     return res.status(200).json({
       ok: true,
       message: "Login successful",
-      token: "token",
+      token: authData.token,
+      user: authData.user,
     });
   } catch (error) {
-    return res.status(500).json({
+    res.status(500).json({
       ok: false,
       message: error.message,
+      stack: error.message,
     });
   }
 });
