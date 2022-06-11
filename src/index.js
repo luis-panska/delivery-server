@@ -1,14 +1,18 @@
 const express = require("express");
 const cors = require("cors");
-const morgan = require("morgan");
-const dotenv = require("dotenv");
 const connectDB = require("./db/connection");
+if (process.env.NODE_ENV !== "production") {
+  const morgan = require("morgan");
+  const dotenv = require("dotenv");
+}
 
 const app = express();
 
-dotenv.config();
+if (process.env.NODE_ENV !== "production") {
+  dotenv.config({ path: "./config/config.env" });
+  app.use(morgan("dev"));
+}
 
-app.use(morgan("dev"));
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
