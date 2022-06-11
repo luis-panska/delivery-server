@@ -2,14 +2,14 @@ const express = require("express");
 const cors = require("cors");
 const connectDB = require("./db/connection");
 if (process.env.NODE_ENV !== "production") {
-  const morgan = require("morgan");
   const dotenv = require("dotenv");
+  dotenv.config();
 }
 
 const app = express();
 
 if (process.env.NODE_ENV !== "production") {
-  dotenv.config();
+  const morgan = require("morgan");
   app.use(morgan("dev"));
 }
 

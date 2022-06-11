@@ -6,7 +6,7 @@ const router = express.Router();
 router.post("/login", (req, res) => {
   try {
     const { email, password } = req.body;
-    if(password !=== "123456") throw new Error("Invalid credentials");
+    if(password !== "123456") throw new Error("Invalid credentials");
     return res.status(200).json({
       ok: true,
       message: "Login successful",
