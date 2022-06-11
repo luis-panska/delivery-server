@@ -9,7 +9,7 @@ if (process.env.NODE_ENV !== "production") {
 const app = express();
 
 if (process.env.NODE_ENV !== "production") {
-  dotenv.config({ path: "./config/config.env" });
+  dotenv.config();
   app.use(morgan("dev"));
 }
 
