@@ -16,11 +16,13 @@ router.post("", async (req, res) => {
     const { username, phone, email, password } = req.body;
     const newUser = await create(username, phone, email, password);
     res.status(200).json({
+      ok: true,
       message: "User created",
       user: newUser,
     });
   } catch (error) {
     res.status(500).json({
+      ok: false,
       message: "Error creating user",
       stack: error.message,
     });
