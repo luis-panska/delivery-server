@@ -13,7 +13,7 @@ router.get("", async (req, res) => {
 });
 router.post("", async (req, res) => {
   try {
-    const { username, phone, email, password } = req.body;
+    const { username = "", phone = "", email = "", password = "" } = req.body;
     const newUser = await create(username, phone, email, password);
     res.status(200).json({
       ok: true,
@@ -23,7 +23,7 @@ router.post("", async (req, res) => {
   } catch (error) {
     res.status(500).json({
       ok: false,
-      message: "Error creating user",
+      message: error.message,
       stack: error.message,
     });
   }
