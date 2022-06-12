@@ -14,7 +14,7 @@ const validatePhoneInUse = async (phone) => {
 };
 
 const validatePassword = async (password) => {
-  if (!phone) throw new Error("El telefono es un campo obligatorio");
+  if (!password) throw new Error("La contraseña es un campo obligatorio");
 };
 
 const validateUsername = async (username) => {
