@@ -1,29 +1,22 @@
-####
-POST http://localhost:4500/api/products HTTP/1.1
+#### CREAR PRODUCTO
+POST https://backend-flutter.herokuapp.com/api/products HTTP/1.1
 content-type: application/json
 
 {
     "name": "Combo burger day2",
     "price": "60.99",
     "description": "Combo burger day de la semana2",
-    "image": "https://static0.tiendeo.pe/images/tiendas/550/catalogos/118602/paginas/mid/00002.jpg",
-    "categoryId": "62acdd61d72c2b9a0373d6d7"
+    "image": "https://res.cloudinary.com/dkyhpwmzf/image/upload/v1655501973/flutter_app/products/FIIF7QIWQAEvei3_gl0nxf.jpg",
+    "categoryId": "62acf25818630f61ad9ddc38"
 }
 ####
 
-####
-GET http://localhost:4500/api/products HTTP/1.1
+#### LISTAR PRODUCTOS
+GET https://backend-flutter.herokuapp.com/api/products HTTP/1.1
 
 ####
 
-
-####
-GET http://localhost:4500/api/products HTTP/1.1
-
-####
-
-
-####
-DELETE http://localhost:4500/api/products/62acdf1bdc9eb22310827259 HTTP/1.1
+#### ELIMINAR PRODUCTO
+DELETE https://backend-flutter.herokuapp.com/api/products/62acdfb6ea63cff81be54f8c HTTP/1.1
 
 ####

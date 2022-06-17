@@ -1,25 +1,25 @@
-####
+#### CREAR CATEGORIA
 POST https://backend-flutter.herokuapp.com/api/categories HTTP/1.1
 content-type: application/json
 
 {
-    "name": "KFC",
-    "description": "Nunca se es muy joven para comenzar, ni demasiado viejo para conquistar un sueño",
-    "image": "https://drive.google.com/file/d/1wxz3KFr5D7FSQdLV2LFSHstvLnon6aii/view"
+    "name": "BURGER KING2",
+    "description": "Di que eres Burger King Lover sin decir que eres Burger King Lover",
+    "image": "https://res.cloudinary.com/dkyhpwmzf/image/upload/v1655501252/flutter_app/categories/burger-king-logo_rchxst.png"
 }
 ####
 
-####
+#### LISTAR CATEGORIAS
 GET https://backend-flutter.herokuapp.com/api/categories HTTP/1.1
 
 ####
 
-####
-DELETE https://backend-flutter.herokuapp.com/api/categories/62acdd0cd72c2b9a0373d6d3 HTTP/1.1
+#### ELIMINAR UNA CATEGORIA
+DELETE https://backend-flutter.herokuapp.com/api/categories/62ad012718630f61ad9ddcb6 HTTP/1.1
 
 ####
 
-####
-GET https://backend-flutter.herokuapp.com/62acdd61d72c2b9a0373d6d7/products HTTP/1.1
+#### LISTAR PRODUCTOS DE CATEGORIA
+GET https://backend-flutter.herokuapp.com/api/categories/none-id/products HTTP/1.1
 
 ####
