@@ -80,4 +80,22 @@ router.post("", async (req, res) => {
   }
 });
 
+router.delete("/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const deletedCategory = await deleteOne(id);
+    res.status(200).json({
+      ok: true,
+      message: "Categoria eliminada correctamente",
+      category: deletedCategory,
+    });
+  } catch (error) {
+    res.status(500).json({
+      ok: false,
+      message: error.message,
+      stack: error.message,
+    });
+  }
+});
+
 module.exports = router;
