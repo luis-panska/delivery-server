@@ -1,0 +1,29 @@
+####
+POST http://localhost:4500/api/products HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Combo burger day2",
+    "price": "60.99",
+    "description": "Combo burger day de la semana2",
+    "image": "https://static0.tiendeo.pe/images/tiendas/550/catalogos/118602/paginas/mid/00002.jpg",
+    "categoryId": "62acdd61d72c2b9a0373d6d7"
+}
+####
+
+####
+GET http://localhost:4500/api/products HTTP/1.1
+
+####
+
+
+####
+GET http://localhost:4500/api/products HTTP/1.1
+
+####
+
+
+####
+DELETE http://localhost:4500/api/products/62acdf1bdc9eb22310827259 HTTP/1.1
+
+####
