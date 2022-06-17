@@ -17,6 +17,6 @@ GET https://backend-flutter.herokuapp.com/api/products HTTP/1.1
 ####
 
 #### ELIMINAR PRODUCTO
-DELETE https://backend-flutter.herokuapp.com/api/products/62acdfb6ea63cff81be54f8c HTTP/1.1
+DELETE https://backend-flutter.herokuapp.com/api/products/62ad019618630f61ad9ddcc0 HTTP/1.1
 
 ####
