@@ -1,0 +1,22 @@
+#### CREAR CREDIT CARD
+POST http://localhost:4500/api/credit-card HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Matias bravo2",
+    "number": "4111411111111111",
+    "expiration": "01/24",
+    "cvv": 425,
+    "userId": "62a5171797ac5ba0f9e67962"
+}
+####
+
+#### LISTAR CREDIT CARD
+GET http://localhost:4500/api/credit-card HTTP/1.1
+
+####
+
+#### ELIMINAR CREDIT CARD
+DELETE http://localhost:4500/api/credit-card/62ad019618630f61ad9ddcc0 HTTP/1.1
+
+####

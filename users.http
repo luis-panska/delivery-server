@@ -1,0 +1,9 @@
+#### LISTAR USUARIOS
+GET https://backend-flutter.herokuapp.com/api/users HTTP/1.1
+
+####
+
+#### ELIMINAR PRODUCTO
+DELETE https://backend-flutter.herokuapp.com/api/users/62ad019618630f61ad9ddcc0 HTTP/1.1
+
+####

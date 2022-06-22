@@ -3,11 +3,11 @@ POST https://backend-flutter.herokuapp.com/api/products HTTP/1.1
 content-type: application/json
 
 {
-    "name": "Combo burger day2",
-    "price": "60.99",
-    "description": "Combo burger day de la semana2",
-    "image": "https://res.cloudinary.com/dkyhpwmzf/image/upload/v1655501973/flutter_app/products/FIIF7QIWQAEvei3_gl0nxf.jpg",
-    "categoryId": "62acf25818630f61ad9ddc38"
+    "name": "LOWENBRAU",
+    "price": "15  ",
+    "description": "Cerveza de alta calidad , laburando desde hace mas de 20 años ",
+    "image": "https://res.cloudinary.com/dkyhpwmzf/image/upload/v1655780537/flutter_app/products/mediebal_pt7lkd.png",
+    "categoryId": "62b13454eb94af5e37ebf233"
 }
 ####
 

@@ -3,9 +3,9 @@ POST https://backend-flutter.herokuapp.com/api/categories HTTP/1.1
 content-type: application/json
 
 {
-    "name": "BURGER KING2",
-    "description": "Di que eres Burger King Lover sin decir que eres Burger King Lover",
-    "image": "https://res.cloudinary.com/dkyhpwmzf/image/upload/v1655501252/flutter_app/categories/burger-king-logo_rchxst.png"
+    "name": "Licores",
+    "description": "Encontraras todo tipo de licores , desde el mas barato al mas caro  ",
+    "image": "https://res.cloudinary.com/dkyhpwmzf/image/upload/v1655753853/flutter_app/categories/licores_mehaol.png"
 }
 ####
 
