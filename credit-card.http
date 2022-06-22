@@ -1,10 +1,10 @@
 #### CREAR CREDIT CARD
-POST http://localhost:4500/api/credit-card HTTP/1.1
+POST https://backend-flutter.herokuapp.com/api/credit-card HTTP/1.1
 content-type: application/json
 
 {
-    "name": "Matias bravo2",
-    "number": "4111411111111111",
+    "name": "Matia2s bravo2",
+    "number": "41114111131111111",
     "expiration": "01/24",
     "cvv": 425,
     "userId": "62a5171797ac5ba0f9e67962"

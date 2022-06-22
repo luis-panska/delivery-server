@@ -1,3 +1,14 @@
+#### LOGIN
+POST https://backend-flutter.herokuapp.com/api/auth/login HTTP/1.1
+content-type: application/json
+
+{
+    "email": "test1@gmail.com",
+    "password": "test1"
+}
+####
+
+
 #### LISTAR USUARIOS
 GET https://backend-flutter.herokuapp.com/api/users HTTP/1.1
 
