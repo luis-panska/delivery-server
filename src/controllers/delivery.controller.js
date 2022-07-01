@@ -1,4 +1,4 @@
-const Delivery = require("../models/delivery.model);
+const Delivery = require("../models/delivery.model");
 const User = require("../models/user.model");
 
 const validateIdentification = async (identification) => {
