@@ -6,6 +6,7 @@ const {
   list,
   deleteOne,
 } = require("../controllers/delivery.controller");
+const { validateJWT } = require("../middlewares/token.handler");
 
 router.get("", async (req, res) => {
   try {
@@ -42,7 +43,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-router.post("", async (req, res) => {
+router.post("", validateJWT, async (req, res) => {
   try {
     const { identification, address, pin, phone, date, userId } = req.body;
     const newDelivery = await create(

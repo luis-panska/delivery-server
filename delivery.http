@@ -1,14 +1,14 @@
 #### CREAR DELIVERY
 POST https://backend-flutter.herokuapp.com/api/deliveries HTTP/1.1
 content-type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTUxNzE3OTdhYzViYTBmOWU2Nzk2MiIsImlhdCI6MTY1NjcwOTE3OCwiZXhwIjoxNjU2Nzk1NTc4fQ.6a0OK6Blc_GgpF0auO_YkiGLEf3VcYg30UitrKyhoXk
 
 {
-    "identification": "123456789",
+    "identification": "Test 1",
     "address": "Calle falsa 123",
-    "pin": "12345",
-    "phone": "123456789",
-    "date": "2020-01-01",
-    "userId": 1
+    "pin": "3245",
+    "phone": "+51 946-123-4567",
+    "date": "2020-01-01"
 }
 ####
 
