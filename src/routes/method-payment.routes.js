@@ -45,8 +45,8 @@ router.get("/:id", async (req, res) => {
 
 router.post("", async (req, res) => {
   try {
-    const { name, image, description } = req.body;
-    const newMethodPayment = await create(name, image, description);
+    const { name, image, imageForm, description } = req.body;
+    const newMethodPayment = await create(name, image, imageForm, description);
     res.status(200).json({
       ok: true,
       message: "Método de pago creado",

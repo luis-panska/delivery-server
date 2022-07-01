@@ -17,6 +17,11 @@ const MethodPaymentSchema = new mongoose.Schema(
       required: true,
       unique: true,
     },
+    imageForm: {
+      type: String,
+      required: true,
+      unique: true,
+    },
   },
   {
     timestamps: true,
