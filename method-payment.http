@@ -1,0 +1,25 @@
+#### CREAR CATEGORIA
+POST https://backend-flutter.herokuapp.com/api/method-payment HTTP/1.1
+content-type: application/json
+
+{
+    "name": "BCP",
+    "description": "Banco de Credito del Perú",
+    "image": "https://121436-530479-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2018/08/logo_1_b.jpg",
+}
+####
+
+#### LISTAR METODOS DE PAGO
+GET https://backend-flutter.herokuapp.com/api/method-payment HTTP/1.1
+
+####
+
+#### LISTAR 1 METODO DE PAGO
+GET https://backend-flutter.herokuapp.com/api/method-payment HTTP/1.1
+
+####
+
+#### ELIMINAR UN METODO DE PAGO
+DELETE https://backend-flutter.herokuapp.com/api/method-payment/62ad012718630f61ad9ddcb6 HTTP/1.1
+
+####
