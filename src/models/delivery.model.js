@@ -5,12 +5,10 @@ const DeliverySchema = new mongoose.Schema(
     identification: {
       type: String,
       required: true,
-      unique: true,
     },
     address: {
       type: String,
       required: true,
-      unique: true,
     },
     pin: {
       type: Number,

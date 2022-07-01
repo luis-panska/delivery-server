@@ -33,7 +33,14 @@ const validateUserId = async (userId) => {
   if (!user) throw new Error("El usuario no existe");
 };
 
-const validateData = async (identification, address, pin, phone, date, userId) => {
+const validateData = async (
+  identification,
+  address,
+  pin,
+  phone,
+  date,
+  userId
+) => {
   await validateIdentification(identification);
   await validateAddress(address);
   await validatePin(pin);
