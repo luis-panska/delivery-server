@@ -4,9 +4,9 @@ content-type: application/json
 Authorization: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTUxNzE3OTdhYzViYTBmOWU2Nzk2MiIsImlhdCI6MTY1NjcwOTUyMCwiZXhwIjoxNjU2Nzk1OTIwfQ.Esy9ya1Yds9lOIR3j5ffrgtvC9S3YTvqQ2y3XSyeMYE
 
 {
-    "identification": "Test 1",
-    "address": "Calle falsa 123",
-    "pin": "3245",
+    "identification": "Test 2",
+    "address": "Calle falsa 125",
+    "pin": "3247",
     "phone": "+51 946-123-4567",
     "date": "2020-01-01"
 }
