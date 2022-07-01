@@ -28,6 +28,7 @@ app.use("/api/categories", require("./routes/category.routes"));
 app.use("/api/products", require("./routes/product.routes"));
 app.use("/api/credit-card", require("./routes/credit-card.routes"));
 app.use("/api/method-payment", require("./routes/method-payment.routes"));
+app.use("/api/deliveries", require("./routes/delivery.routes"));
 
 connectDB().then(() => {
   app.listen(process.env.PORT || 4500, () => {

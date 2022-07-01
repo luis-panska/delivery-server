@@ -1,0 +1,23 @@
+#### CREAR DELIVERY
+POST https://backend-flutter.herokuapp.com/api/deliveries HTTP/1.1
+content-type: application/json
+
+{
+    "identification": "123456789",
+    "address": "Calle falsa 123",
+    "pin": "12345",
+    "phone": "123456789",
+    "date": "2020-01-01",
+    "userId": 1
+}
+####
+
+#### LISTAR DELIVERY
+GET https://backend-flutter.herokuapp.com/api/deliveries HTTP/1.1
+
+####
+
+#### ELIMINAR DELIVERY
+DELETE https://backend-flutter.herokuapp.com/api/deliveries/62ad019618630f61ad9ddcc0 HTTP/1.1
+
+####

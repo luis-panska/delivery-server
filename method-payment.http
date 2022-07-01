@@ -1,13 +1,27 @@
-#### CREAR CATEGORIA
+#### CREAR METODO DE PAGO
 POST https://backend-flutter.herokuapp.com/api/method-payment HTTP/1.1
 content-type: application/json
 
 {
     "name": "BCP",
     "description": "Banco de Credito del Perú",
-    "image": "https://121436-530479-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2018/08/logo_1_b.jpg"
+    "image": "https://121436-530479-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2018/08/logo_1_b.jpg",
+    "imageForm":"https://www.viabcp.com/wcm/connect/04fdb88f-41a7-4835-bbad-6d91bd3863ac/Credimas%2Bcorregida.jpg?MOD=AJPERES&CACHEID=ROOTWORKSPACE-04fdb88f-41a7-4835-bbad-6d91bd3863ac-nyFsNj."
 }
 ####
+
+#### CREAR METODO DE PAGO
+POST https://backend-flutter.herokuapp.com/api/method-payment HTTP/1.1
+content-type: application/json
+
+{
+    "name": "INTERBANK",
+    "description": "Banco Interbank",
+    "image": "https://www.ccelpolo.com/wp-content/uploads/2019/08/LOGO-INTERBANK.jpg",
+    "imageForm":"https://content-us-2.content-cms.com/9b3f67ef-5a9f-4acc-8ce8-bcc27fa681c7/dxdam/e0/e0094c1b-38d4-488f-97ae-23d1ec0594eb/img_tc-visa-infinite_2x-min.png?t=1652825187387"
+}
+####
+
 
 #### LISTAR METODOS DE PAGO
 GET https://backend-flutter.herokuapp.com/api/method-payment HTTP/1.1
@@ -20,6 +34,6 @@ GET https://backend-flutter.herokuapp.com/api/method-payment/62bf4915f055a2818ee
 ####
 
 #### ELIMINAR UN METODO DE PAGO
-DELETE https://backend-flutter.herokuapp.com/api/method-payment/62bf4915f055a2818eee4189 HTTP/1.1
+DELETE https://backend-flutter.herokuapp.com/api/method-payment/62bf492bf055a2818eee4191 HTTP/1.1
 
 ####
