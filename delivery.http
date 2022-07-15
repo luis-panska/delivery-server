@@ -1,7 +1,7 @@
 #### CREAR DELIVERY
 POST https://backend-flutter.herokuapp.com/api/deliveries HTTP/1.1
 content-type: application/json
-Authorization: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTUxNzE3OTdhYzViYTBmOWU2Nzk2MiIsImlhdCI6MTY1NjcwOTUyMCwiZXhwIjoxNjU2Nzk1OTIwfQ.Esy9ya1Yds9lOIR3j5ffrgtvC9S3YTvqQ2y3XSyeMYE
+Authorization: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTUxNzE3OTdhYzViYTBmOWU2Nzk2MiIsImlhdCI6MTY1NzkxNzgzNywiZXhwIjoxNjU4MDA0MjM3fQ.74jFN1R4i4ZcsjzpLCQ0GmhnWAXO_rxBDjLbToCypvM
 
 {
     "identification": "Test 2",
