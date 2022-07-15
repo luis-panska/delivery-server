@@ -12,12 +12,26 @@ Authorization: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTUxNzE3OT
 }
 ####
 
+#### CREAR DELIVERY
+POST http://localhost:4500/api/deliveries HTTP/1.1
+content-type: application/json
+Authorization: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTUxNzE3OTdhYzViYTBmOWU2Nzk2MiIsImlhdCI6MTY1NzkxODIxOSwiZXhwIjoxNjU4MDA0NjE5fQ.VHG-iNe01cMYtpH-E3lCkZFNNI5BPIyWYOTsDUrnZdw
+
+{
+    "identification": "test 1",
+    "address": "Calle falsa 125",
+    "pin": "3247",
+    "phone": "+51 946-123-4567",
+    "date": "2020-01-01"
+}
+####
+
 #### LISTAR DELIVERY
 GET https://backend-flutter.herokuapp.com/api/deliveries HTTP/1.1
 
 ####
 
 #### ELIMINAR DELIVERY
-DELETE https://backend-flutter.herokuapp.com/api/deliveries/62ad019618630f61ad9ddcc0 HTTP/1.1
+DELETE https://backend-flutter.herokuapp.com/api/deliveries/62d1d2b2a0925e672773d949 HTTP/1.1
 
 ####

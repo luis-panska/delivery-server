@@ -61,7 +61,7 @@ const listOne = async (id) => {
 const create = async (identification, address, pin, phone, date, userId) => {
   await validateData(identification, address, pin, phone, date, userId);
   const userEqual = await User.findOne({ username: identification });
-  if (userEqual) {
+  if (!userEqual) {
     throw new Error("La identificación debe ser igual a su nombre de usuario");
   }
   if (userEqual.username !== identification) {
